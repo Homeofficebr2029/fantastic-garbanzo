@@ -1,50 +1,106 @@
-# Welcome to your Expo app 👋
+# App Mobile - Sabor & Cia
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicativo mobile do projeto Lanchonete Sabor & Cia, criado com Expo e React Native.
 
-## Get started
+## Objetivo
 
-1. Install dependencies
+O app mobile foi criado para representar a versao para celular da lanchonete, permitindo evoluir futuramente para listagem de produtos, carrinho, login e envio de pedidos.
 
-   ```bash
-   npm install
-   ```
+## Tecnologias
 
-2. Start the app
+- Expo
+- React Native
+- Expo Router
+- TypeScript
+- JavaScript
 
-   ```bash
-   npx expo start
-   ```
+## Funcionalidades atuais
 
-In the output, you'll find options to open the app in a
+- Estrutura inicial com Expo Router
+- Navegacao por abas
+- Tela inicial com cardapio visual
+- Produtos com imagens, categorias, descricao, preco e botao de adicionar
+- Tela de produto com imagem, descricao, preco e botao de adicionar ao carrinho
+- Tela de pedido com selecao de pagamento por Pix, cartao ou dinheiro
+- Estrutura separada para telas, navegacao, servicos e contexto de carrinho
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Estrutura principal
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```text
+app-mobile/
+├── app/                  # Rotas principais do Expo Router
+│   ├── (tabs)/           # Telas exibidas em abas
+│   └── _layout.tsx       # Layout principal
+├── assets/               # Imagens e icones do app
+│   └── products/         # Imagens dos produtos do cardapio
+├── components/           # Componentes reutilizaveis
+├── constants/            # Tema e constantes visuais
+├── hooks/                # Hooks auxiliares
+├── src/
+│   ├── context/          # Contexto do carrinho
+│   ├── screens/          # Telas criadas para o app
+│   └── services/         # Configuracao de API
+├── app.json              # Configuracao do Expo
+└── package.json          # Dependencias e scripts
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Como rodar o app mobile
 
-## Learn more
+Entre na pasta do app:
 
-To learn more about developing your project with Expo, look at the following resources:
+```powershell
+cd D:\Projetos\lanchonete\sabor_e_cia\app-mobile
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Instale as dependencias:
 
-## Join the community
+```powershell
+npm install
+```
 
-Join our community of developers creating universal apps.
+Inicie o Expo:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```powershell
+npm start
+```
+
+Ou:
+
+```powershell
+npx expo start
+```
+
+Depois escolha uma das opcoes:
+
+- Pressione `a` para abrir no emulador Android.
+- Use o aplicativo Expo Go no celular e leia o QR Code.
+- Rode `npm run web` para abrir a versao web do app.
+
+## Scripts disponiveis
+
+| Comando | Descricao |
+| --- | --- |
+| `npm start` | Inicia o Expo |
+| `npm run android` | Abre no Android |
+| `npm run ios` | Abre no iOS |
+| `npm run web` | Abre no navegador |
+| `npm run lint` | Verifica o codigo |
+
+## Observacoes
+
+- A configuracao de API esta em `src/services/api.js`.
+- A URL atual da API e `http://192.168.15.8:5000`.
+- Caso o backend rode em outra porta ou computador, essa URL precisa ser atualizada.
+- O app mobile ja possui cardapio com imagens e resumo de pedido.
+- As formas de pagamento aparecem na interface, mas ainda nao processam pagamento real.
+- A tela `app/(tabs)/produto.tsx` existe, mas nao aparece no menu de abas principal.
+- As telas antigas em `Screens/` estao vazias e podem ser removidas ou substituidas depois.
+
+## Proximos passos
+
+- Conectar a lista de produtos com o backend.
+- Exibir a tela de produto na navegacao principal.
+- Fazer o botao "Adicionar ao Carrinho" atualizar o contexto do carrinho.
+- Criar fluxo de login/cadastro.
+- Enviar pedidos para o backend.
+- Enviar a forma de pagamento escolhida junto com o pedido.

@@ -1,4 +1,4 @@
-function ProductCard({ nome, preco }) {
+export default function ProductCard({ nome, preco }) {
   return (
     <div className="card">
       <h3>{nome}</h3>

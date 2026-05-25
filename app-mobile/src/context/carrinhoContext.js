@@ -1,54 +1,75 @@
-import React, {
-  createContext,
-  useState
-} from "react";
+import React, { createContext, useMemo, useState } from "react";
 
-export const CarrinhoContext =
-createContext({});
+export const CarrinhoContext = createContext({});
 
-export function CarrinhoProvider({
-  children
-}) {
-
-  const [carrinho, setCarrinho] =
-  useState([]);
+export function CarrinhoProvider({ children }) {
+  const [carrinho, setCarrinho] = useState({});
 
   function adicionarProduto(produto) {
+    setCarrinho((atual) => {
+      const itemAtual = atual[produto.id];
 
-    setCarrinho((prev) => [
-      ...prev,
-      produto
-    ]);
+      return {
+        ...atual,
+        [produto.id]: {
+          ...produto,
+          quantidade: itemAtual ? itemAtual.quantidade + 1 : 1,
+        },
+      };
+    });
   }
 
-  function removerProduto(index) {
+  function removerProduto(id) {
+    setCarrinho((atual) => {
+      const itemAtual = atual[id];
 
-    const novoCarrinho = [...carrinho];
+      if (!itemAtual) {
+        return atual;
+      }
 
-    novoCarrinho.splice(index, 1);
+      const proximoCarrinho = { ...atual };
 
-    setCarrinho(novoCarrinho);
+      if (itemAtual.quantidade <= 1) {
+        delete proximoCarrinho[id];
+      } else {
+        proximoCarrinho[id] = {
+          ...itemAtual,
+          quantidade: itemAtual.quantidade - 1,
+        };
+      }
+
+      return proximoCarrinho;
+    });
   }
 
-  const total = carrinho.reduce(
-    (acc, item) =>
-      acc + Number(item.preco),
-    0
+  function limparCarrinho() {
+    setCarrinho({});
+  }
+
+  const itens = useMemo(() => Object.values(carrinho), [carrinho]);
+
+  const total = itens.reduce(
+    (acc, item) => acc + Number(item.preco) * item.quantidade,
+    0,
+  );
+
+  const quantidadeTotal = itens.reduce(
+    (acc, item) => acc + item.quantidade,
+    0,
   );
 
   return (
-
     <CarrinhoContext.Provider
       value={{
-        carrinho,
+        itens,
+        total,
+        quantidadeTotal,
         adicionarProduto,
         removerProduto,
-        total
+        limparCarrinho,
       }}
     >
-
       {children}
-
     </CarrinhoContext.Provider>
   );
 }

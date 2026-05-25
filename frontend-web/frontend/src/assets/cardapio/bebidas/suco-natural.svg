@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">Suco natural</title>
+  <desc id="desc">Ilustracao de copo de suco natural com fruta</desc>
+  <rect width="640" height="420" fill="#fffaf2"/>
+  <circle cx="450" cy="115" r="110" fill="#f3b547" opacity=".72"/>
+  <circle cx="180" cy="322" r="125" fill="#1f6d4a" opacity=".14"/>
+  <g transform="translate(210 55)">
+    <path d="M47 72h182l-22 240H69L47 72z" fill="#f6d169"/>
+    <path d="M66 98h144l-17 188H83L66 98z" fill="#f3b547"/>
+    <path d="M70 72h136" fill="none" stroke="#12462f" stroke-width="12" stroke-linecap="round"/>
+    <path d="M156 80 210 4" fill="none" stroke="#12462f" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="202" cy="272" r="38" fill="#ff8f3d"/>
+    <circle cx="202" cy="272" r="24" fill="#fff5d8"/>
+    <path d="M198 234v76M164 272h76" stroke="#ff8f3d" stroke-width="5"/>
+    <path d="M92 126c36 24 73 24 112 0" fill="none" stroke="#fff4c7" stroke-width="12" stroke-linecap="round" opacity=".8"/>
+  </g>
+</svg>

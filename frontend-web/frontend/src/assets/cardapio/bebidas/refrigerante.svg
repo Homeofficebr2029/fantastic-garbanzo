@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">Refrigerante lata</title>
+  <desc id="desc">Ilustracao de uma lata de refrigerante gelada</desc>
+  <rect width="640" height="420" fill="#f7f4ee"/>
+  <circle cx="430" cy="104" r="102" fill="#f3b547" opacity=".65"/>
+  <circle cx="210" cy="330" r="132" fill="#1f6d4a" opacity=".13"/>
+  <g transform="translate(220 58)">
+    <rect x="56" y="0" width="148" height="304" rx="42" fill="#9e2b20"/>
+    <rect x="72" y="18" width="116" height="268" rx="32" fill="#b53529"/>
+    <ellipse cx="130" cy="20" rx="68" ry="20" fill="#f2ded2"/>
+    <ellipse cx="130" cy="284" rx="58" ry="17" fill="#6c211b"/>
+    <rect x="88" y="112" width="84" height="68" rx="18" fill="#fffaf2"/>
+    <path d="M111 78c31-22 58 2 50 32-8 31-51 36-69 7" fill="none" stroke="#f3b547" stroke-width="12" stroke-linecap="round"/>
+    <text x="130" y="154" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#12462f">GELADO</text>
+  </g>
+</svg>
