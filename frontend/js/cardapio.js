@@ -44,39 +44,39 @@ let produtos = [
         categoria:"Hambúrguer",
 
         imagem:
-        "../public/images/burger1.jpg"
+        "../assets/xburguer.png"
     },
 
     {
         id:2,
 
-        nome:"Combo Especial",
+        nome:"Batata Frita",
 
         descricao:
-        "Hambúrguer + batata + refrigerante.",
+        "Porção de batata frita crocante.",
 
         preco:"39,90",
 
         categoria:"Combos",
 
         imagem:
-        "../public/images/burger2.jpg"
+        "../assets/batata.png"
     },
 
     {
         id:3,
 
-        nome:"Chicken Burger",
+        nome:"Cerveja 600ml",
 
         descricao:
-        "Frango crocante com molho especial.",
+        "Cerveja garrafa 600ml gelada.",
 
         preco:"27,90",
 
         categoria:"Hambúrguer",
 
         imagem:
-        "../public/images/burger3.jpg"
+        "../assets/xburguer.png"
     },
 
     {
@@ -92,7 +92,7 @@ let produtos = [
         categoria:"Bebidas",
 
         imagem:
-        "../public/images/refrigerante.jpg"
+        "../assets/cerveja.png"
     }
 
 ];

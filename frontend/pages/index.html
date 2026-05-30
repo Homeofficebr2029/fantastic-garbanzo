@@ -1,24 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
   <meta charset="UTF-8">
-
-  <title>Lanchonete</title>
-
-  <link rel="stylesheet" href="/css/style.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lanchonete Sabor & Cia</title>
+  <link rel="stylesheet" href="../css/index.css?v=10">
 </head>
 <body>
+  <header class="topo">
+    <div class="logo">
+      <span>🍔</span>
+      <h1>Sabor & Cia</h1>
+    </div>
 
-  <h1>Lanchonete Sabor & Cia</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="pedidos.html">Pedidos</a>
+      <a href="login.html">Login</a>
+    </nav>
 
-  <img
-    src="/public/images/logo.png"
-    width="200"
-  >
+    <a class="botao-carrinho" href="carrinho.html">🛒 Carrinho</a>
+  </header>
 
-  <script src="/js/app.js"></script>
+  <main>
+    <section class="hero">
+      <div class="hero-texto">
+        <p class="subtitulo">Lanches artesanais, porções e sabor de verdade</p>
+        <h2>Bem-vindo à Lanchonete Sabor & Cia</h2>
+        <p>
+          Escolha seus produtos favoritos e monte seu pedido de forma simples,
+          rápida e prática.
+        </p>
 
+        <div class="acoes">
+          <a href="cardapio.html" class="btn-principal">Ver Cardápio</a>
+          <a href="#destaques" class="btn-secundario">Ver Destaques</a>
+        </div>
+      </div>
+
+      <div class="hero-imagem">
+        <img src="../assets/xburguer.png" alt="X-Burger artesanal">
+      </div>
+    </section>
+
+    <section id="destaques" class="destaques">
+      <h2>Destaques da casa</h2>
+      <p>Alguns produtos que já fazem parte do nosso cardápio.</p>
+
+      <div class="cards">
+        <article class="card">
+          <img src="../assets/xburguer.png" alt="X-Burger">
+          <div class="card-conteudo">
+            <h3>X-Burger</h3>
+            <p>Hambúrguer artesanal com muito sabor.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="../assets/batata.png" alt="Batata Frita">
+          <div class="card-conteudo">
+            <h3>Batata Frita</h3>
+            <p>Porção crocante para acompanhar seu lanche.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <h2>🍔 Sabor & Cia</h2>
+    <p>Delivery rápido, sabor inesquecível.</p>
+    <p>© 2026 Sabor & Cia - Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
